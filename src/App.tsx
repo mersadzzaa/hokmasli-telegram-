@@ -688,9 +688,9 @@ const App: React.FC = () => {
           
           // --- TELEGRAM NOTIFICATION LOGIC START ---
           const tgChatId = localStorage.getItem("telegram_chat_id");
-          const TELEGRAM_BOT_TOKEN = "8506797614:AAFS88cCTcGx6hpMt1gc1mUMHciM2Qgqm6k"; // <--- جایگذاری توکن ربات
+          const TELEGRAM_BOT_TOKEN = "8506797614:AAFS88cCTcGx6hpMt1gc1mUMHciM2Qgqm6k"; 
 
-          if (tgChatId && TELEGRAM_BOT_TOKEN !== "YOUR_BOT_TOKEN_HERE") {
+          if (tgChatId) {
               const winningTeamName = `تیم ${handWinnerTeamId}`;
               const losingTeamId = handWinnerTeamId === 1 ? 2 : 1;
               const resultText = `${roomData.scores[1]} - ${roomData.scores[2]}`;
@@ -1327,4 +1327,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
